@@ -14,7 +14,7 @@ var gitVer *regexp.Regexp
 
 func init() {
 	// exactly vX.Y.Z (go-compatible semver)
-	exactVer = regexp.MustCompile(`^v\d+\.\d+\.\d+$`)
+	exactVer = regexp.MustCompile(`^v\d+\.\d+\.\d+(\+.*)?$`)
 
 	// vX.Y.Z-n-g0000000 git post-release, semver prerelease
 	// vX.Y.Z-dirty git post-release, semver prerelease
